@@ -1,0 +1,246 @@
+{{> header}}
+
+<section class="about">
+    <h1>
+        About Us
+    </h1>
+
+    <hr>
+
+    <p class="subtitle">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet
+    </p>
+
+    <div class="texts">
+        <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirmod tempor invidunt ut labore et dolore aliquyam erat, sed diam voluptua. At vero eos et accusam et justo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor et dolore aliquyam erat. Lorem ipsum dolor sit amet. Lorem ipsum eat.
+        </p>
+
+        <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirtempor invidunt ut labore et dolore aliquyam erat, sed diam voluptua. At vero eos eaccusam et justo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor et dolore aliquyam erat. Loreipsum dolor sit amet. Lorem ipsum dolor et.
+        </p>
+    </div>
+    <div class="casts">
+        <div class="item">
+            <img src="/images/person1.png" alt="">
+            <h1>
+                Md. Khalil Uddin
+            </h1>
+            <p>
+                Head of Ideas
+            </p>
+        </div>
+        <div class="item">
+            <img src="/images/person2.png" alt="">
+            <h1>
+                Md. Khalil Uddin
+            </h1>
+            <p>
+                Head of Ideas
+            </p>
+        </div>
+        <div class="item">
+            <img src="/images/person3.png" alt="">
+            <h1>
+                Md. Khalil Uddin
+            </h1>
+            <p>
+                Head of Ideas
+            </p>
+        </div>
+        <div class="item">
+            <img src="/images/person4.jpg" alt="">
+            <h1>
+                Md. Khalil Uddin
+            </h1>
+            <p>
+                Head of Ideas
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="portfolio">
+    <h1>
+        About Us
+    </h1>
+
+    <hr>
+
+    <div class="portfolio-group">
+        <ul>
+            <li>
+                All
+            </li>
+            <li>
+                Branding
+            </li>
+            <li>
+                Design
+            </li>
+            <li>
+                Development
+            </li>
+            <li>
+                Strategy
+            </li>
+        </ul>
+
+        <div class="items">
+            <div class="item">
+                <img src="/images/item1.png" alt="">
+            </div>
+            <div class="item">
+                <img src="/images/item2.png" alt="">
+            </div>
+            <div class="item">
+                <img src="/images/item3.png" alt="">
+            </div>
+            <div class="item">
+                <img src="/images/item4.png" alt="">
+            </div>
+            <div class="item">
+                <img src="/images/item5.png" alt="">
+            </div>
+            <div class="item">
+                <img src="/images/item6.png" alt="">
+            </div>
+            <div class="item">
+                <img src="/images/item7.png" alt="">
+            </div>
+            <div class="item">
+                <img src="/images/item8.png" alt="">
+            </div>
+            <div class="item">
+                <img src="/images/item9.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <h1>
+        GET IN TOUCH
+    </h1>
+
+    <hr>
+
+    <p class="subtitle">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet
+    </p>
+
+
+    <div class="form">
+        <div class="left_info">
+            <div class="info">
+                <h1>
+                    Address
+                </h1>
+                <p>
+                    312, 7th Ave, New York
+                    NY 101200, United States of America
+                </p>
+            </div>
+            <div class="info">
+                <h1>
+                    Hotline (24x7)
+                </h1>
+                <p>
+                    +65 0052 300, +65 88251 210
+                    +88 01723 511 340
+                </p>
+            </div>
+            <div class="info">
+                <h1>
+                    E-mail
+                </h1>
+                <p>
+                    shapedtheme@gmail.com
+                    khalilkode@gmail.com
+                </p>
+            </div>
+        </div>
+        <div class="right_info">
+            <div class="row">
+                <input type="text" id="name" placeholder="YOUR NAME" required>
+                <input type="text" id="email" placeholder="YOUR E-MAIL"  required>
+            </div>
+            <div class="row">
+                <input type="text" id="subject" placeholder="YOUR SUBJECT" required>
+                <input type="text" id="company" placeholder="COMPANY NAME" required>
+            </div>
+            <div class="row">
+                <textarea placeholder="WRITE YOUR MESSAGE" name="" id="message" cols="30" rows="10" required></textarea>
+            </div>
+            <div class="row">
+                <button type="button" class="btn btn-dark submit">SEND MESSAGE</button>
+                <p>
+                    * We’ll contact you as as possible. We don’t reply on Monday.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+ <script>
+        let submit = document.querySelector('button.submit'),
+            name = document.querySelector('#name'),
+            email = document.querySelector('#email'),
+            subject = document.querySelector('#subject'),
+            company = document.querySelector('#company'),
+            message = document.querySelector('#message');
+
+        const url = `${window.location.origin}/message`;
+
+
+        submit.addEventListener('click', async function(event){
+            if(name.value != "" && email.value != "" && subject.value != "" && company.value != "" && message.value != ""){   
+                async function postData(url = '', data = {}) {
+                    // Default options are marked with *
+                    const response = await fetch(url, {
+                        method: 'POST',
+                        // mode: 'cors',
+                        headers: {
+                        'Content-Type': 'application/json'
+                        // 'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                        redirect: 'follow',
+                        body: JSON.stringify(data)
+                    });
+                    
+                    if(response.status === 201){
+                        return true;
+                    }
+                    else{
+                        return false;
+                    }
+                    
+                }
+
+                const Data = {
+                    name: name.value,
+                    email: email.value,
+                    subject: subject.value,
+                    companyName: company.value,
+                    message: message.value
+                };
+
+                try{
+                    const data = await postData(url, Data);
+
+                    alert('Message was sent!');
+                    location.reload();
+                }
+                catch(e){
+                    console.log(e);
+                }
+            }
+            else{
+                alert('Complete inputs!');
+            }
+
+            
+
+        });
+        
+    </script>
+
+{{> footer }}

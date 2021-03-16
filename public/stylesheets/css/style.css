@@ -1,0 +1,334 @@
+/**
+ * Global Reset of all HTML Elements
+ *
+ * Resetting all of our HTML Elements ensures a smoother
+ * visual transition between browsers. If you don't believe me,
+ * try temporarily commenting out this block of code, then go
+ * and look at Mozilla versus Safari, both good browsers with
+ * a good implementation of CSS. The thing is, all browser CSS
+ * defaults are different and at the end of the day if visual
+ * consistency is what we're shooting for, then we need to
+ * make sure we're resetting all spacing elements.
+ *
+ */
+html,
+body {
+  border: 0;
+  font-family: "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+div,
+span,
+object,
+iframe,
+img,
+table,
+caption,
+thead,
+tbody,
+tfoot,
+tr,
+tr,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+hgroup,
+menu,
+nav,
+footer,
+header,
+section,
+summary,
+mark,
+audio,
+video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cit,
+code,
+del,
+dfn,
+em,
+ins,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+b,
+i,
+hr,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+legend,
+label {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+canvas,
+figure,
+figure img,
+figcaption,
+hgroup,
+footer,
+header,
+nav,
+section,
+audio,
+video {
+  display: block;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+table caption,
+table th,
+table td {
+  text-align: left;
+  vertical-align: middle;
+}
+a img {
+  border: 0;
+}
+:focus {
+  outline: 0;
+}
+header {
+  background-image: url("/images/bg1.jpg");
+  padding: 200px 100px;
+}
+header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 48px;
+  color: white;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+}
+header p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: white;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 20px;
+}
+header div.buttons_row {
+  display: flex;
+  justify-content: center;
+}
+header div.buttons_row button:first-child {
+  margin-right: 10px;
+}
+section.about {
+  padding: 88px 200px;
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.about h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  color: #747474;
+  text-transform: uppercase;
+}
+section.about hr {
+  width: 50px;
+  height: 1px;
+  background-color: #747474;
+}
+section.about p.subtitle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+  color: #747474;
+  margin-bottom: 50px;
+}
+section.about div.texts {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 62px;
+}
+section.about div.texts p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #747474;
+}
+section.about div.texts p:first-child {
+  margin-right: 40px;
+}
+section.about div.casts {
+  display: flex;
+  justify-content: space-between;
+}
+section.about div.casts div.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+}
+section.portfolio {
+  padding: 88px 200px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.portfolio h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  color: #747474;
+  text-transform: uppercase;
+}
+section.portfolio hr {
+  width: 50px;
+  height: 1px;
+  background-color: #747474;
+}
+section.portfolio p.subtitle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+  color: #747474;
+  margin-bottom: 50px;
+}
+section.portfolio div.portfolio-group {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.portfolio div.portfolio-group ul {
+  list-style: none;
+  display: flex;
+}
+section.portfolio div.portfolio-group ul li {
+  margin-right: 20px;
+  cursor: pointer;
+}
+section.portfolio div.portfolio-group ul li:last-child {
+  margin-right: 0;
+}
+section.portfolio div.portfolio-group div.items {
+  margin-top: 40px;
+  margin-bottom: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+section.portfolio div.portfolio-group div.items div.item {
+  width: 30%;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+section.portfolio div.portfolio-group div.items div.item img {
+  width: 100%;
+}
+section.portfolio div.form {
+  display: flex;
+  justify-content: space-between;
+}
+section.portfolio div.form div.left_info {
+  width: 20%;
+}
+section.portfolio div.form div.left_info div.info h1 {
+  text-align: left;
+}
+section.portfolio div.form div.right_info {
+  width: 70%;
+}
+section.portfolio div.form div.right_info div.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+section.portfolio div.form div.right_info div.row input {
+  width: 46%;
+  padding: 10px;
+  border-radius: 3px;
+}
+section.portfolio div.form div.right_info div.row textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 3px;
+  border-width: 3px;
+}
+footer {
+  padding-top: 82px;
+  padding-bottom: 75px;
+  height: 298px;
+  background-color: #032e53;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+}
+footer div.row i {
+  color: #fff;
+  font-size: 20px;
+}
+footer hr {
+  width: 50px;
+  height: 1px;
+  background-color: #fff;
+}
+footer p.copy {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  text-align: center;
+  color: #fff;
+  margin-top: 20px;
+}
+section.messages {
+  padding: 100px 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.messages div.item {
+  width: 50vw;
+  padding: 50px;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}

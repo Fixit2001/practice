@@ -1,0 +1,26 @@
+{{> header }}
+
+<section class="messages">
+    <h1 style="margin-bottom: 20px;">All Messages</h1>
+    {{#each messages}}
+    <div class="item">
+        <p>
+            <strong>Name:</strong> {{this.name}}
+        </p>
+        <p>
+            <strong>Email:</strong> {{this.email}}
+        </p>
+        <p>
+            <strong>Subject:</strong> {{this.subject}}
+        </p>
+        <p>
+            <strong>Company Name:</strong> {{this.companyName}}
+        </p>
+        <p>
+            <strong>Message:</strong> {{this.message}}
+        </p>
+    </div>
+    {{/each}}
+</section>
+
+{{> footer }}
